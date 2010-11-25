@@ -1,0 +1,35 @@
+snippet ifi
+	if (isset(${1:/* condition */})) {
+		${2:// code...}
+	}
+
+snippet pr
+	ITK::print_r( ${1:/* var */} );
+
+snippet Sto
+	StorableList( '${1:classname}', array( 'where' => '${2:where}' ) );
+
+snippet Stof
+	StorableList( '${1:classname}', array(
+		'where'         => array( '${2:where}' ),
+		'where_params'  => array( ${3:/* where params */} ),
+		'orderby'       => '${4:orderby}',
+	) );
+
+snippet loadC
+	loadChildren( array( 
+		'${1:classname}' => array( 'keyfield' => '${2:id}', 'parent_keyfield' => '${3:parent id}' ),
+	) );
+
+snippet actionclass
+	class ${1:name}Actions extends Action
+	{
+		${2:// code...}
+	}
+
+snippet stoclass
+	class ${1:name} extends Storable
+	{
+		public function getDB() { return DBManager::factory( '${2:dsn}' )->getDb(); }
+		public function getTable() { return '${3:tablename}'; }${4}
+	}

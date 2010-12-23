@@ -9,6 +9,7 @@ termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 termcapinfo xterm-256color 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 defbce "on"
 altscreen on
+defshell -bash
 
 #change the hardstatus settings to give an window list at the bottom of the
 ##screen, with the time and date and with the current window highlighted
@@ -16,3 +17,7 @@ hardstatus alwayslastline
 hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m/%d %{W}%c %{g}]'
 
 bind ` select 0
+
+
+screen -t vim
+screen -t bash

@@ -1,5 +1,6 @@
 
 # VIM
+alias v="view -T xterm-256color"
 alias vi="vim -T xterm-256color"
 alias vim="vim -T xterm-256color"
 

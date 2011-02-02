@@ -65,7 +65,7 @@ vmap <leader>nA       <plug>NERDCommenterAppend
 au BufNewFile,BufRead /tmp/sql*     setf sql
 au BufNewFile,BufRead *.phtml     setf php
 
-let g:user_zen_leader_key = '<c-m>'
+let g:user_zen_leader_key = '<c-z>'
 set complete=.,w,b,u
 "au FileType * if filereadable($VIMRUNTIME.'/syntax/'.&filetype.'.vim') | exe('setl dict+='.$VIMRUNTIME.'/syntax/'.&filetype.'.vim') | endif
 map <silent><F5> :BufExplorer<CR>

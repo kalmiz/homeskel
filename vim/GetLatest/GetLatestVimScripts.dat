@@ -2,12 +2,13 @@ ScriptID SourceID Filename
 --------------------------
 120 9388 decho.vim
 642 8136 GetLatestVimScripts.vim
-489 9573 :AutoInstall: Manpageview.vim
+489 14117 :AutoInstall: Manpageview.vim
 508 9865 :AutoInstall: ZoomWin.vim
-52 12959 :AutoInstall: calendar.vim
+52 14880 :AutoInstall: calendar.vim
 642 8136 :AutoInstall: getscript.vim
-2204 13924 :AutoInstall: twitvim.vim
+2204 14690 :AutoInstall: twitvim.vim
 120 9388 :AutoInstall: Decho.vim
 1502 11981 :AutoInstall: vimball.vim
 1075 11979 :AutoInstall: netrw.vim
 1984 13961 :AutoInstall: FuzzyFinder
+3252 13948 :AutoInstall: L9

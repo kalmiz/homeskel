@@ -29,7 +29,7 @@ set pastetoggle=<F12>
 "set number
 
 filetype plugin indent on
-color murphy
+color kalmi
 syn on
 
 map , <leader>

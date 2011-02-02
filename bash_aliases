@@ -16,3 +16,10 @@ alias si="svn ci"
 alias sr="svn revert"
 alias ss="svn st -u"
 alias sp="svn up"
+
+# package management
+alias i="sudo apt-get install"
+alias s="apt-cache search"
+
+# web
+alias k="w3m http://kalmi.eu/"

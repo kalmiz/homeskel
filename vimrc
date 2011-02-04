@@ -243,6 +243,8 @@ map <Leader>N :new %:p:h<CR>
 " Give tab cycling nicer keys (normally these just do same as j & k)
 noremap <C-n> :tabnext<CR>
 noremap <C-p> :tabNext<CR>
+noremap <Tab> :tabnext<CR>
+noremap <S-Tab> :tabprev<CR>
  
 " new tab
 "nmap <Leader>t :tabe %:p:h<CR>

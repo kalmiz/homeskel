@@ -64,6 +64,7 @@ vmap <leader>nA       <plug>NERDCommenterAppend
 
 au BufNewFile,BufRead /tmp/sql*     setf sql
 au BufNewFile,BufRead *.phtml     setf php
+au BufNewFile,BufRead *.json     setf json
 
 let g:user_zen_leader_key = '<c-z>'
 set complete=.,w,b,u

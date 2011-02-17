@@ -1,0 +1,48 @@
+
+# module require
+snippet req
+	require('${1}')${2}
+
+# Anonymous Function as parameter
+snippet fp
+	function(${1}) {${2}}
+
+# error handler
+snippet iferr
+	if (err) next(err);
+	else {
+		${1}
+	}
+
+# callback with error handling
+snippet ferr
+	function(err) {
+		if (err) next(err);
+		else {
+			next(err, ${1});
+		}
+	}
+
+# hydrate callback
+snippet hycb
+	hydrateHandler(${1:hydrate}, ${2})
+
+# result handler with error handling
+snippet fcb
+	function(err, result) {
+		if (err) next(err);
+		else {
+			${1}
+			next(err, result);
+		}
+	}
+
+# mongoose model
+snippet mm
+	mongoose.model('${1:name}', ${1:schema});
+
+# mongoose schema
+snippet ms
+	var ${1:Name} = new Schema({
+		${2:col} = { type: ${3:type}}${4}
+	});

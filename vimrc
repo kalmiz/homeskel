@@ -280,3 +280,7 @@ let g:snips_author = 'Zoltan Kalmar'
 function! TimestampToDate()
     echo strftime("%Y-%m-%d %H:%M:%S", expand('<cword>'))
 endfunction
+
+if filereadable($HOME . "/.vimrc_local")
+    source ~/.vimrc_local
+endif

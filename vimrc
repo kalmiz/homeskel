@@ -81,6 +81,7 @@ imap <C-w>t <ESC>:tabnew<cr>
 imap <silent><M-PageDown> <ESC>gta
 imap <silent><M-PageUp> <ESC>gTa
 map <C-e>w :call SwitchWrap()<CR>
+map <Space> <PageDown>
 
 function! SwitchWrap()
     if &wrap == 1

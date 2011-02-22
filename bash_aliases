@@ -1,6 +1,8 @@
 #bash
 alias b="cd $OLDPWD"
 alias ll="ls -al"
+alias tgz="tar -xzf"
+alias tbz="tar -xjf"
 
 # VIM
 alias v="view -T xterm-256color"

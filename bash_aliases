@@ -1,3 +1,6 @@
+#bash
+alias b="cd $OLDPWD"
+alias ll="ls -al"
 
 # VIM
 alias v="view -T xterm-256color"

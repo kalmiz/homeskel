@@ -25,6 +25,7 @@ set tag=~/tags
 set noignorecase
 set modeline
 set pastetoggle=<F12>
+set fen
 
 "set number
 
@@ -66,8 +67,9 @@ au BufNewFile,BufRead /tmp/sql*     setf sql
 au BufNewFile,BufRead *.phtml     setf php
 au BufNewFile,BufRead *.json     setf json
 
-let g:user_zen_leader_key = '<c-z>'
-set complete=.,w,b,u
+let g:user_zen_leader_key = '<C-z>'
+let g:use_zen_complete_tag = 1
+set complete=.,w,b
 "au FileType * if filereadable($VIMRUNTIME.'/syntax/'.&filetype.'.vim') | exe('setl dict+='.$VIMRUNTIME.'/syntax/'.&filetype.'.vim') | endif
 map <silent><F5> :BufExplorer<CR>
 imap <silent><F5> <ESC>:BufExplorer<CR>
@@ -225,8 +227,8 @@ function! JavaScriptFold()
     setl foldtext=FoldText()
 endfunction
 
-au FileType javascript call JavaScriptFold()
-au FileType javascript setl fen
+"au FileType javascript call JavaScriptFold()
+"au FileType javascript setl fen
 
 set statusline+=%{SyntasticStatuslineFlag()}
 
@@ -248,6 +250,10 @@ noremap <C-p> :tabNext<CR>
 noremap <Tab> :tabnext<CR>
 noremap <S-Tab> :tabprev<CR>
  
+for i in range(1,9)
+    exec "map <M-" . i ."> " . i . "gt"
+endfor
+
 " new tab
 "nmap <Leader>t :tabe %:p:h<CR>
 nmap <Leader>T :tabe %:p:h<CR>
@@ -285,3 +291,5 @@ endfunction
 if filereadable($HOME . "/.vimrc_local")
     source ~/.vimrc_local
 endif
+
+let twitvim_browser_cmd = 'google-chrome'

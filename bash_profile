@@ -1,4 +1,5 @@
 
+export PS1="\[\033]0;\w\007\]$PS1"
 export PATH="$HOME/bin:$PATH"
 export TERM="xterm-256color"
 export LANG=en_US.utf8
@@ -19,4 +20,11 @@ if [ -f ~/.bash_local ]; then
     . ~/.bash_local
 fi
 
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
+
 set -o vi
+set editing-mode vi
+set keymap vi
+set convert-meta on

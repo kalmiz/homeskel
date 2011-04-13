@@ -240,8 +240,8 @@ let twitvim_count = 50
 "-------------------------------------
  
 " quick file browse mapping
-map <Leader>e :e %:p:h<CR>
-map <Leader>E :lcd %:p:h<CR>
+map <Leader>r :e %:p:h<CR>
+map <Leader>R :lcd %:p:h<CR>
 map <Leader>N :new %:p:h<CR>
  
 " Give tab cycling nicer keys (normally these just do same as j & k)

@@ -7,7 +7,7 @@ map <leader>kt :%s/[\t ]*$//<CR>
 
 map <leader>lp a$this->params->
 
-let g:php_folding = 1
+"let g:php_folding = 1
 
 compiler php
 setlocal keywordprg=phpmanual

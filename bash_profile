@@ -36,6 +36,8 @@ function proml {
   local LIGHT_GREEN="\[\033[1;32m\]"
   local       WHITE="\[\033[1;37m\]"
   local  LIGHT_GRAY="\[\033[0;37m\]"
+  local      YELLOW="\[\033[1;33m\]"
+  local       RESET="\[\e[0m\]" 
   case $TERM in
     xterm*)
     TITLEBAR='\[\033]0;\u@\h:\w\007\]'
@@ -45,7 +47,8 @@ function proml {
     ;;
   esac
 
-  export PS1="\[\033]0;\w\007\]\$(parse_git_branch)$PS1"
+  #export PS1="\[\033]0;\w\007\]$YELLOW\$(parse_git_branch)$RESET $PS1"
+  export PS1="$YELLOW\$(parse_git_branch)$RESET$PS1"
 }
 proml
 

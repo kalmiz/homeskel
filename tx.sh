@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 #
 # Helper for tmux.
 #
@@ -11,6 +11,7 @@ set_ssh_env()
 }
 
 NAME=$1
+
 if [[ $NAME != "" ]]; then
     
     EXISTS=`tmux ls 2>/dev/null | cut -d: -f1 | grep $NAME`

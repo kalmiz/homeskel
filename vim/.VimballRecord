@@ -5,3 +5,5 @@ command-t.vba: call delete('/home/kalmi/.vim/ruby/command-t/base.rb')|call delet
 twitvim-0.5.6.vba: call delete('/home/kalmi/.vim/plugin/twitvim.vim')|call delete('/home/kalmi/.vim/doc/twitvim.txt')
 manpageview.vba: call delete('/home/kalmi/.vim/plugin/manpageviewPlugin.vim')|call delete('/home/kalmi/.vim/autoload/manpageview.vim')|call delete('/home/kalmi/.vim/syntax/man.vim')|call delete('/home/kalmi/.vim/syntax/mankey.vim')|call delete('/home/kalmi/.vim/syntax/info.vim')|call delete('/home/kalmi/.vim/syntax/manphp.vim')|call delete('/home/kalmi/.vim/doc/manpageview.txt')
 twitvim-0.6.1.vba: call delete('/home/kalmi/.vim/plugin/twitvim.vim')|call delete('/home/kalmi/.vim/doc/twitvim.txt')
+twitvim-0.6.2.vba: call delete('/home/kalmi/.vim/plugin/twitvim.vim')|call delete('/home/kalmi/.vim/doc/twitvim.txt')
+netrw.vba: call delete('/home/kalmi/.vim/plugin/netrwPlugin.vim')|call delete('/home/kalmi/.vim/autoload/netrw.vim')|call delete('/home/kalmi/.vim/autoload/netrwFileHandlers.vim')|call delete('/home/kalmi/.vim/autoload/netrwSettings.vim')|call delete('/home/kalmi/.vim/doc/pi_netrw.txt')|call delete('/home/kalmi/.vim/syntax/netrw.vim')

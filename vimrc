@@ -293,3 +293,6 @@ if filereadable($HOME . "/.vimrc_local")
 endif
 
 let twitvim_browser_cmd = 'google-chrome'
+
+" fix misspelled return
+abbr retrun return

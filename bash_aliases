@@ -3,6 +3,7 @@ alias b="cd $OLDPWD"
 alias ll="ls -al"
 alias tgz="tar -xzf"
 alias tbz="tar -xjf"
+alias f="source ~/bin/fixssh"
 
 # VIM
 alias v="view -T xterm-256color"

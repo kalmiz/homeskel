@@ -247,20 +247,23 @@ map <Leader>N :new %:p:h<CR>
 " Give tab cycling nicer keys (normally these just do same as j & k)
 noremap <C-n> :tabnext<CR>
 noremap <C-p> :tabNext<CR>
-noremap <Tab> :tabnext<CR>
-noremap <S-Tab> :tabprev<CR>
- 
-for i in range(1,9)
-    exec "map <M-" . i ."> " . i . "gt"
-endfor
+"noremap <Tab> :tabnext<CR>
+"noremap <S-Tab> :tabprev<CR>
+noremap <Left> :tabprev<CR> 
+noremap <Right> :tabnext<CR> 
+"noremap <Up> :bp<CR>
+"noremap <Down> :bn<CR>
+"for i in range(1,9)
+"    exec "map <M-" . i ."> " . i . "gt"
+"endfor
 
 " new tab
 "nmap <Leader>t :tabe %:p:h<CR>
-nmap <Leader>T :tabe %:p:h<CR>
-nmap <Leader>n :tabnew<CR>
+"nmap <Leader>T :tabe %:p:h<CR>
+nmap <Leader>n :tabe %:p:h<CR>
  
 " tab close
-map <Leader>w :tabclose<CR>
+"map <Leader>w :tabclose<CR>
 " close window
 map <Leader>q :q<CR>
 " quit vim
@@ -296,3 +299,8 @@ let twitvim_browser_cmd = 'google-chrome'
 
 " fix misspelled return
 abbr retrun return
+
+" Tabular.vim
+noremap <LocalLeader>a= :Tab /=<CR>
+noremap <LocalLeader>a> :Tab /=><CR>
+noremap <LocalLeader>a: :Tab /:<CR>

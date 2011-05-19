@@ -2,18 +2,19 @@
 # module require
 snippet req
 	require('${1}')${2}
-
 # Anonymous Function as parameter
 snippet fp
 	function(${1}) {${2}}
-
 # error handler
 snippet iferr
-	if (err) next(err);
+	if (err) return next(err);
 	else {
 		${1}
 	}
-
+# return on error
+snippet iferrr
+	if (err) return next(err);
+	${1}
 # callback with error handling
 snippet ferr
 	function(err) {
@@ -22,33 +23,40 @@ snippet ferr
 			next(err, ${1});
 		}
 	}
-
+# callback with retrun on error
+snippet ferrr
+	function(err) {
+		if (err) retrun next(err);
+		next(err, ${1});
+	}
 # hydrate callback
 snippet hycb
 	hydrateHandler(${1:hydrate}, ${2})
-
 # result handler with error handling
 snippet fcb
 	function(err, result) {
-		if (err) next(err);
-		else {
-			${1}
-			next(err, result);
-		}
+		if (err) return next(err);
+		${1}
+		next(err, result);
 	}
-
 # request handler function
 snippet frh
 	function (req, res, next) {
 		${1}
 	}
-
 # mongoose model
 snippet mm
 	mongoose.model('${1:name}', ${1:schema});
-
 # mongoose schema
 snippet ms
 	var ${1:Name} = new Schema({
 		${2:col} = { type: ${3:type}}${4}
+	});
+snippet fore
+	forEach(function(e) {
+		${1}
+	});
+snippet forE
+	forEach(function(e) {
+		${1}
 	});

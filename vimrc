@@ -240,27 +240,30 @@ let twitvim_count = 50
 "-------------------------------------
  
 " quick file browse mapping
-map <Leader>e :e %:p:h<CR>
-map <Leader>E :lcd %:p:h<CR>
+map <Leader>r :e %:p:h<CR>
+map <Leader>R :lcd %:p:h<CR>
 map <Leader>N :new %:p:h<CR>
  
 " Give tab cycling nicer keys (normally these just do same as j & k)
 noremap <C-n> :tabnext<CR>
 noremap <C-p> :tabNext<CR>
-noremap <Tab> :tabnext<CR>
-noremap <S-Tab> :tabprev<CR>
- 
-for i in range(1,9)
-    exec "map <M-" . i ."> " . i . "gt"
-endfor
+"noremap <Tab> :tabnext<CR>
+"noremap <S-Tab> :tabprev<CR>
+noremap <Left> :tabprev<CR> 
+noremap <Right> :tabnext<CR> 
+"noremap <Up> :bp<CR>
+"noremap <Down> :bn<CR>
+"for i in range(1,9)
+"    exec "map <M-" . i ."> " . i . "gt"
+"endfor
 
 " new tab
 "nmap <Leader>t :tabe %:p:h<CR>
-nmap <Leader>T :tabe %:p:h<CR>
-nmap <Leader>n :tabnew<CR>
+"nmap <Leader>T :tabe %:p:h<CR>
+nmap <Leader>n :tabe %:p:h<CR>
  
 " tab close
-map <Leader>w :tabclose<CR>
+"map <Leader>w :tabclose<CR>
 " close window
 map <Leader>q :q<CR>
 " quit vim
@@ -279,7 +282,13 @@ nmap <F3> :FufBuffer<CR>
 nmap <F4> :FufTag<CR>
 nmap <F5> :FufFileWithCurrentBufferDir<CR>
 let g:CommandTMaxFiles=20000
-"let g:CommandTMaxDepth=30
+let g:CommandTMaxDepth=30
+set wildignore+=.git,php/hires/public/assets/index.hu/import,web/index.hu/assets/import,php/lib/Nemo/Config/*
+nmap <Leader>yr :CommandT<CR>
+nmap <Leader>yp :CommandT php/hires/public<CR>
+nmap <Leader>ym :CommandT php/hires/mobile<CR>
+nmap <Leader>ya :CommandT php/hires/admin<CR>
+
 "
 let g:snipplr_rb='~/bin/snipplr.rb'
 let g:snips_author = 'Zoltan Kalmar'
@@ -293,3 +302,19 @@ if filereadable($HOME . "/.vimrc_local")
 endif
 
 let twitvim_browser_cmd = 'google-chrome'
+
+" fix misspelled return
+abbr retrun return
+
+" Tabular.vim
+noremap <LocalLeader>a= :Tab /=<CR>
+noremap <LocalLeader>a> :Tab /=><CR>
+noremap <LocalLeader>a: :Tab /:<CR>
+
+" fugitive settings
+autocmd BufReadPost fugitive://* set bufhidden=delete
+autocmd User fugitive
+  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+  \   nnoremap <buffer> .. :edit %:h<CR> |
+  \ endif
+

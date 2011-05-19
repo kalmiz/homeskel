@@ -37,6 +37,12 @@ snippet fcb
 		}
 	}
 
+# request handler function
+snippet frh
+	function (req, res, next) {
+		${1}
+	}
+
 # mongoose model
 snippet mm
 	mongoose.model('${1:name}', ${1:schema});

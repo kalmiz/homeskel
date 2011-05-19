@@ -7,45 +7,52 @@ srcdir = .
 topdir = /usr/lib/ruby/1.8/x86_64-linux
 hdrdir = $(topdir)
 VPATH = $(srcdir):$(topdir):$(hdrdir)
-prefix = $(DESTDIR)/usr
 exec_prefix = $(prefix)
+prefix = $(DESTDIR)/usr
+sharedstatedir = $(prefix)/com
+mandir = $(prefix)/share/man
+psdir = $(docdir)
+oldincludedir = $(DESTDIR)/usr/include
+localedir = $(datarootdir)/locale
+bindir = $(exec_prefix)/bin
+libexecdir = $(prefix)/lib/ruby1.8
 sitedir = $(DESTDIR)/usr/local/lib/site_ruby
+htmldir = $(docdir)
+vendorarchdir = $(vendorlibdir)/$(sitearch)
+includedir = $(prefix)/include
+infodir = $(prefix)/share/info
+vendorlibdir = $(vendordir)/$(ruby_version)
+sysconfdir = $(DESTDIR)/etc
+libdir = $(exec_prefix)/lib
+sbindir = $(exec_prefix)/sbin
 rubylibdir = $(libdir)/ruby/$(ruby_version)
 docdir = $(datarootdir)/doc/$(PACKAGE)
 dvidir = $(docdir)
+vendordir = $(libdir)/ruby/vendor_ruby
 datarootdir = $(prefix)/share
-archdir = $(rubylibdir)/$(arch)
-sbindir = $(exec_prefix)/sbin
-psdir = $(docdir)
-localedir = $(datarootdir)/locale
-htmldir = $(docdir)
-datadir = $(prefix)/share
-includedir = $(prefix)/include
-infodir = $(datarootdir)/info
-sysconfdir = $(DESTDIR)/etc
-mandir = $(datadir)/man
-libdir = $(exec_prefix)/lib
-sharedstatedir = $(prefix)/com
-oldincludedir = $(DESTDIR)/usr/include
 pdfdir = $(docdir)
+archdir = $(rubylibdir)/$(arch)
 sitearchdir = $(sitelibdir)/$(sitearch)
-bindir = $(exec_prefix)/bin
+datadir = $(datarootdir)
 localstatedir = $(DESTDIR)/var
 sitelibdir = $(sitedir)/$(ruby_version)
-libexecdir = $(exec_prefix)/libexec
 
-CC = gcc
+CC = cc
 LIBRUBY = $(LIBRUBY_SO)
 LIBRUBY_A = lib$(RUBY_SO_NAME)-static.a
 LIBRUBYARG_SHARED = -l$(RUBY_SO_NAME)
 LIBRUBYARG_STATIC = -l$(RUBY_SO_NAME)-static
 
 RUBY_EXTCONF_H = 
-CFLAGS   =  -fPIC -Wall -g -fno-strict-aliasing -O2  -fPIC 
+CFLAGS   =  -fPIC -fno-strict-aliasing -g -g -O2  -fPIC $(cflags) 
 INCFLAGS = -I. -I$(topdir) -I$(hdrdir) -I$(srcdir)
-CPPFLAGS = -DHAVE_RUBY_H 
+DEFS     = 
+CPPFLAGS = -DHAVE_RUBY_H  $(DEFS) $(cppflags)
 CXXFLAGS = $(CFLAGS) 
-DLDFLAGS =  -rdynamic -Wl,-export-dynamic  
+ldflags  = -L.  -rdynamic -Wl,-export-dynamic
+dldflags = 
+archflag = 
+DLDFLAGS = $(ldflags) $(dldflags) $(archflag)
 LDSHARED = $(CC) -shared
 AR = ar
 EXEEXT = 
@@ -68,11 +75,11 @@ COPY = cp
 
 preload = 
 
-libpath = $(libdir)
-LIBPATH =  -L"$(libdir)"
+libpath = . $(libdir)
+LIBPATH =  -L. -L$(libdir)
 DEFFILE = 
 
-CLEANFILES = 
+CLEANFILES = mkmf.log
 DISTCLEANFILES = 
 
 extout = 
@@ -87,6 +94,7 @@ DLLIB = $(TARGET).so
 EXTSTATIC = 
 STATIC_LIB = 
 
+BINDIR        = $(bindir)
 RUBYCOMMONDIR = $(sitedir)$(target_prefix)
 RUBYLIBDIR    = $(sitelibdir)$(target_prefix)
 RUBYARCHDIR   = $(sitearchdir)$(target_prefix)
@@ -142,7 +150,7 @@ site-install-rb: install-rb
 
 $(DLLIB): $(OBJS)
 	@-$(RM) $@
-	$(LDSHARED) $(DLDFLAGS) $(LIBPATH) -o $@ $(OBJS) $(LOCAL_LIBS) $(LIBS)
+	$(LDSHARED) -o $@ $(OBJS) $(LIBPATH) $(DLDFLAGS) $(LOCAL_LIBS) $(LIBS)
 
 
 
@@ -170,4 +178,4 @@ $(DLLIB): $(OBJS)
 # ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 # POSSIBILITY OF SUCH DAMAGE.
 
-CFLAGS += -std=gnu99 -Wall -Wextra -Wno-unused-parameter
+CFLAGS += -std=c99 -Wall -Wextra -Wno-unused-parameter

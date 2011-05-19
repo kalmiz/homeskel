@@ -282,7 +282,13 @@ nmap <F3> :FufBuffer<CR>
 nmap <F4> :FufTag<CR>
 nmap <F5> :FufFileWithCurrentBufferDir<CR>
 let g:CommandTMaxFiles=20000
-"let g:CommandTMaxDepth=30
+let g:CommandTMaxDepth=30
+set wildignore+=.git,php/hires/public/assets/index.hu/import,web/index.hu/assets/import,php/lib/Nemo/Config/*
+nmap <Leader>yr :CommandT<CR>
+nmap <Leader>yp :CommandT php/hires/public<CR>
+nmap <Leader>ym :CommandT php/hires/mobile<CR>
+nmap <Leader>ya :CommandT php/hires/admin<CR>
+
 "
 let g:snipplr_rb='~/bin/snipplr.rb'
 let g:snips_author = 'Zoltan Kalmar'
@@ -304,3 +310,11 @@ abbr retrun return
 noremap <LocalLeader>a= :Tab /=<CR>
 noremap <LocalLeader>a> :Tab /=><CR>
 noremap <LocalLeader>a: :Tab /:<CR>
+
+" fugitive settings
+autocmd BufReadPost fugitive://* set bufhidden=delete
+autocmd User fugitive
+  \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+  \   nnoremap <buffer> .. :edit %:h<CR> |
+  \ endif
+

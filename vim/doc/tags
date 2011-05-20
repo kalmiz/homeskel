@@ -432,6 +432,7 @@ TwitVim-credits	twitvim.txt	/*TwitVim-credits*
 TwitVim-delete	twitvim.txt	/*TwitVim-delete*
 TwitVim-direct-message	twitvim.txt	/*TwitVim-direct-message*
 TwitVim-fave	twitvim.txt	/*TwitVim-fave*
+TwitVim-filter	twitvim.txt	/*TwitVim-filter*
 TwitVim-goto	twitvim.txt	/*TwitVim-goto*
 TwitVim-hide-header	twitvim.txt	/*TwitVim-hide-header*
 TwitVim-highlight	twitvim.txt	/*TwitVim-highlight*
@@ -1374,6 +1375,8 @@ twitvim_enable_perl	twitvim.txt	/*twitvim_enable_perl*
 twitvim_enable_python	twitvim.txt	/*twitvim_enable_python*
 twitvim_enable_ruby	twitvim.txt	/*twitvim_enable_ruby*
 twitvim_enable_tcl	twitvim.txt	/*twitvim_enable_tcl*
+twitvim_filter_enable	twitvim.txt	/*twitvim_filter_enable*
+twitvim_filter_regex	twitvim.txt	/*twitvim_filter_regex*
 twitvim_login	twitvim.txt	/*twitvim_login*
 twitvim_login_b64	twitvim.txt	/*twitvim_login_b64*
 twitvim_old_retweet	twitvim.txt	/*twitvim_old_retweet*

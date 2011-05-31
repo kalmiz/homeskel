@@ -269,10 +269,6 @@ map <Leader>q :q<CR>
 " quit vim
 map <Leader>Q :qall!<CR>
 
-" Better way to enter command line (get rid of pointless shift)
-nnoremap ; :
- 
-
 " make F2 save
 nmap <silent> <F2> <ESC>:w<CR>
 imap <silent> <F2> <C-o>:w<CR>

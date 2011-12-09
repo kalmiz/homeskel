@@ -20,8 +20,7 @@ set ts=4
 set softtabstop=4
 set ffs=unix,dos
 set hidden
-set noacd
-set tag=~/tags
+set tag=tags
 set noignorecase
 set modeline
 set pastetoggle=<F12>
@@ -274,6 +273,7 @@ nmap <silent> <F2> <ESC>:w<CR>
 imap <silent> <F2> <C-o>:w<CR>
 
 nmap <Leader>b :FufBuffer<CR>
+nmap <Leader>. :FufCoverageFile<CR>
 nmap <F3> :FufBuffer<CR>
 nmap <F4> :FufTag<CR>
 nmap <F5> :FufFileWithCurrentBufferDir<CR>
@@ -314,3 +314,4 @@ autocmd User fugitive
   \   nnoremap <buffer> .. :edit %:h<CR> |
   \ endif
 
+let g:notes_directory = '~/Dropbox/Notes'

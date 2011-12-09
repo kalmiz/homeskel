@@ -14,7 +14,7 @@ set smartindent
 set cindent
 set ai
 set ignorecase
-set et
+set noet
 set sw=4
 set ts=4
 set softtabstop=4

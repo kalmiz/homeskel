@@ -11,13 +11,18 @@ set_ssh_env()
 }
 
 NAME=$1
+CFG=""
 
 if [[ $NAME != "" ]]; then
     
     EXISTS=`tmux ls 2>/dev/null | cut -d: -f1 | grep $NAME`
 
+    if [[ `uname` == "Darwin" ]]; then
+        CFG="-f $HOME/.tmux_osx.conf"
+    fi
+
     if [ "x$EXISTS" = "x" ]; then
-        tmux new-session -d -s $NAME
+        tmux $CFG new-session -d -s $NAME
     fi
     #set_ssh_env
     tmux attach-session -t $NAME

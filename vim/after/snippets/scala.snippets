@@ -1,0 +1,62 @@
+#vim :set noet:
+snippet importtest
+	import org.scalatest.junit.JUnitRunner
+	import org.scalatest.junit.AssertionsForJUnit
+	import scala.collection.mutable._
+	import org.junit.Assert._
+	import org.junit.Test
+	import org.junit.Before
+
+snippet match
+	match {
+		case ${1} => ${2}
+		case _ =>
+	}
+
+snippet object
+	object ${1:name}${2} {
+		${3}
+	}
+
+snippet class
+	${1:case }class ${2:name}${3} {
+		${4}
+	}
+
+snippet od
+	override def ${1} = ${2}
+
+snippet ov
+	override val ${1} = ${2}
+
+snippet olv
+	override lazy val ${1} = ${2}
+
+snippet def
+	def ${1:name}(${2})${3} = {
+		${4}
+	}
+
+snippet tdef
+	@Test
+	def ${1:name}(${2})${3} = {
+		${4}
+	}
+
+snippet pri
+	println(${1})
+snippet javax.serlvet.api
+	import javax.servlet.http.{HttpServlet, HttpServletRequest, HttpServletResponse}
+
+snippet do
+	do${1:Get}(request: HttpServletRequest, response: HttpServletResponse): Unit = {
+		val writer = response.getWriter
+		response.setStatus(HttpServletResponse.SC_OK)
+		response.setCharacterEncoding("UTF-8")
+		${2}
+	}
+
+snippet for
+	for (${1:item} <- ${2:list}) {
+		${3}
+	}

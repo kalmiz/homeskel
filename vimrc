@@ -318,3 +318,4 @@ autocmd User fugitive
   \ endif
 
 let g:notes_directory = '~/Dropbox/Notes'
+let g:Grep_Find_Use_Xargs = 0

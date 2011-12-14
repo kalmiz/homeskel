@@ -25,6 +25,7 @@ set noignorecase
 set modeline
 set pastetoggle=<F12>
 set fen
+set termencoding=utf-8
 
 "set number
 

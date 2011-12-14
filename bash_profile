@@ -3,7 +3,7 @@ export PS1="\[\033]0;\w\007\]$PS1"
 export PATH="$HOME/bin:$PATH"
 export TERM="xterm-256color"
 export LANG=en_US.utf8
-export EDITOR="vim"
+export EDITOR="/usr/bin/vim"
 export VISUAL=$EDITOR
 export MYSQL_PS1="\u@\h:\d> "
 
@@ -56,3 +56,9 @@ set -o vi
 set editing-mode vi
 set keymap vi
 set convert-meta on
+
+# Settings for OSX
+if [[ `uname` = "Darwin" ]]; then
+	export PATH="$PATH:/opt/local/bin:/opt/local/sbin"
+fi
+

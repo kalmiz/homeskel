@@ -7,8 +7,8 @@ alias f="source ~/bin/fixssh"
 
 # VIM
 alias v="view -T xterm-256color"
-alias vi="vim -T xterm-256color"
-alias vim="vim -T xterm-256color"
+alias vi="/usr/bin/vim -T xterm-256color"
+alias vim="/usr/bin/vim -T xterm-256color"
 
 # screen
 alias sc="screen -U"

@@ -29,3 +29,6 @@ alias s="apt-cache search"
 
 # web
 alias k="w3m http://kalmi.eu/"
+
+# scala
+alias scalatags="/opt/local/bin/ctags -h ".scala" -R --scala-kinds=cot --exclude=*.js -f tags ."

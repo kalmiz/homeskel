@@ -273,6 +273,8 @@ map <Leader>Q :qall!<CR>
 nmap <silent> <F2> <ESC>:w<CR>
 imap <silent> <F2> <C-o>:w<CR>
 
+let g:fuf_file_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp|class)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|^target/'
+let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp|class)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|^target/|^project/plugins/target/'
 nmap <Leader>b :FufBuffer<CR>
 nmap <Leader>. :FufCoverageFile<CR>
 nmap <F3> :FufBuffer<CR>

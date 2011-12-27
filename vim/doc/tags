@@ -63,8 +63,6 @@
 'syntastic_quiet_warnings'	syntastic.txt	/*'syntastic_quiet_warnings'*
 .snippet	snipMate.txt	/*.snippet*
 .snippets	snipMate.txt	/*.snippets*
-/MyProjectDir/	dbext.txt	/*\/MyProjectDir\/*
-/MyProjectDir/	dbext.txt	/*\/MyProjectDir\/*
 :ABitLy	twitvim.txt	/*:ABitLy*
 :ACligs	twitvim.txt	/*:ACligs*
 :AGoogl	twitvim.txt	/*:AGoogl*
@@ -548,7 +546,9 @@ ZoomWin.txt	ZoomWin.txt	/*ZoomWin.txt*
 `::^	xpt.snippet.syn.txt	/*`::^*
 ```	xpt.snippet.syn.txt	/*```*
 `cursor^	xpt.snippet.syn.txt	/*`cursor^*
+aI	indent-object.txt	/*aI*
 abc	fuf.txt	/*abc*
+ai	indent-object.txt	/*ai*
 asa	dbext.txt	/*asa*
 ase	dbext.txt	/*ase*
 b:VCSCommandCommand	vcscommand.txt	/*b:VCSCommandCommand*
@@ -1085,6 +1085,7 @@ hl-twitterTime	twitvim.txt	/*hl-twitterTime*
 hl-twitterTitle	twitvim.txt	/*hl-twitterTitle*
 hl-twitterUser	twitvim.txt	/*hl-twitterUser*
 http	pi_netrw.txt	/*http*
+iI	indent-object.txt	/*iI*
 i_<C-\>	xptemplate.txt	/*i_<C-\\>*
 i_<C-g>	xptemplate.txt	/*i_<C-g>*
 i_<C-r><C-\>	xptemplate.txt	/*i_<C-r><C-\\>*
@@ -1099,6 +1100,12 @@ i_<Plug>(fakeclip-screen-insert-r)	fakeclip.txt	/*i_<Plug>(fakeclip-screen-inser
 i_<S-tab>	xptemplate.txt	/*i_<S-tab>*
 i_<tab>	xptemplate.txt	/*i_<tab>*
 i_CTRL-R_<Tab>	snipMate.txt	/*i_CTRL-R_<Tab>*
+idntobj-about	indent-object.txt	/*idntobj-about*
+idntobj-blanklines	indent-object.txt	/*idntobj-blanklines*
+idntobj-introduction	indent-object.txt	/*idntobj-introduction*
+idntobj-objects	indent-object.txt	/*idntobj-objects*
+ii	indent-object.txt	/*ii*
+indent-object.txt	indent-object.txt	/*indent-object.txt*
 ingres	dbext.txt	/*ingres*
 interbase	dbext.txt	/*interbase*
 l9	l9.txt	/*l9*

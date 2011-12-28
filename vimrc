@@ -274,7 +274,7 @@ nmap <silent> <F2> <ESC>:w<CR>
 imap <silent> <F2> <C-o>:w<CR>
 
 let g:fuf_file_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp|class)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|^target/'
-let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp|class)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|^target/|^project/plugins/target/'
+let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp|class|png|jpg|gif)$|(^|[/\\])\.(hg|git|bzr)($|[/\\])|^target/|^project/plugins/target/|^cache/|^webroot/assets/_archive/|base\.v\d/|base\.v\d\.static/'
 nmap <Leader>b :FufBuffer<CR>
 nmap <Leader>. :FufCoverageFile<CR>
 nmap <F3> :FufBuffer<CR>
@@ -300,7 +300,7 @@ if filereadable($HOME . "/.vimrc_local")
     source ~/.vimrc_local
 endif
 
-let twitvim_browser_cmd = 'google-chrome'
+let twitvim_browser_cmd = 'open'
 
 " fix misspelled return
 abbr retrun return
@@ -319,3 +319,10 @@ autocmd User fugitive
 
 let g:notes_directory = '~/Dropbox/Notes'
 let g:Grep_Find_Use_Xargs = 0
+
+" Ganja settings
+if getcwd() =~ '^/www/ganja'
+	set tags=~/tags
+	set noet
+	set sw=4
+endif
